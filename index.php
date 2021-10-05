@@ -55,19 +55,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
              
             <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="username or email" name="usern">
+    <input class="input-field" type="text" placeholder="username or email" name="usern" required="" value="<?php if(isset($_COOKIE['name'])){echo $_COOKIE['name'];} ?>">
   </div>
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="pass">
+    <input class="input-field" type="password" placeholder="Password" name="pass" required="" value="<?php if(isset($_COOKIE['password'])){ echo $_COOKIE['password'];} ?>">
   </div>
             <div class="form-group">
               <!--<div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customControlInline">
                 <label class="custom-control-label" for="customControlInline">Remember me</label>
               </div>-->
-              <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label><br>
+              <input type="checkbox" value="lsRememberMe" id="rememberMe" name="remember" <?php if(isset($_COOKIE['check'])){echo 'checked';} ?>> <label for="rememberMe">Remember me</label><br>
             </div><br><br>
               <div class="d-flex justify-content-center mt-3 login_container">
 
