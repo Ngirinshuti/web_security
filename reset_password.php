@@ -65,7 +65,8 @@ if (!mysqli_stmt_prepare($stmt,$sql)) {
  echo "statement failed";
 }
 else{
-	$newpwdhash=sha1($passwordrepeat);
+  $salted="salting_string@12345".$passwordrepeat;
+	$newpwdhash=sha1($salted);
   mysqli_stmt_bind_param($stmt,"ss",$newpwdhash,$tokenemail);
   mysqli_stmt_execute($stmt);
 
