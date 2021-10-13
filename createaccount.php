@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,8 +53,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body background="npc.png">
 <br><br><br><br><br>
-<div class="user_card" style="margin-left: 500px;">
-<form action="account.php" method="POST" style="max-width:500px;margin:auto;">
+<div class="user_card" style="margin-left: 50px;">
+<form action="account.php" method="POST" style="max-width:500px;margin:auto;background-color: whitesmoke;">
   <h3>Register Form</h3>
     <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -74,7 +75,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   </div>
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="pwd" required="">
+    <input class="input-field" type="password" placeholder="Password" name="pwd" required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.* )(?=.*[^a-zA-Z0-9]).{8,16}$" title="Must contain at least:one number,one lowercase,one uppercase, one special characher and minimum length is 8, maximum length is 16">
   </div>
  <div class="input-container">
     <i class="fa fa-key icon"></i>
@@ -89,3 +90,4 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 </body>
 </html>
+  
